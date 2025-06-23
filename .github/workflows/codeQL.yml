@@ -20,15 +20,8 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
+        with:
+          config-file: .github/codeql/codeql-config.yml
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
-        packs:
-  # Use these packs for JavaScript analysis
-javascript:
-   - scope/js-pack1
-    - scope/js-pack2
-  # Use these packs for Java analysis
- java:
-    - scope/java-pack1
-    - scope/java-pack2@v1.0.0
